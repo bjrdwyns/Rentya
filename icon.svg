@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Rentya</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8AAAF0"/>
+      <stop offset="1" stop-color="#6080DE"/>
+    </linearGradient>
+    <linearGradient id="back" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.82"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.28"/>
+    </linearGradient>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="1323" height="1189">
+      <rect width="1323" height="1189" fill="#fff"/>
+      <path d="M410,966 V820 C410,705 468,622 566,560 L1008,244 Q1030,230 1030,262 V552 C1030,790 790,985 482,985 H432 Q410,985 410,966 Z" fill="#000" stroke="#000" stroke-width="2"/>
+    </mask>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g transform="translate(512 512) scale(0.887) translate(-639.5 -612)">
+    <path d="M247,900 V660 C247,425 452,237 682,237 H1010 Q1022,237 1012,246 L284,916 Q262,932 247,908 Z" fill="url(#back)" mask="url(#cut)"/>
+    <path d="M410,966 V820 C410,705 468,622 566,560 L1008,244 Q1030,230 1030,262 V552 C1030,790 790,985 482,985 H432 Q410,985 410,966 Z" fill="url(#front)"/>
+  </g>
+</svg>
