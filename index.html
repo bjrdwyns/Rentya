@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>Pilotage</title>
+<title>Rentya</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Pilotage">
+<meta name="apple-mobile-web-app-title" content="Rentya">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#F6F7FB">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -39,7 +39,7 @@
 <div class="splash" id="splash"><img src="icon-180.png" alt=""><div class="dots"><i></i><i></i><i></i></div><span>Chargement…</span></div>
 <form class="setup" id="setup" hidden>
   <img src="icon-180.png" alt="">
-  <h1>Pilotage</h1>
+  <h1>Rentya</h1>
   <p>Entrez votre code d'accès. Il ne vous sera demandé qu'une seule fois sur cet appareil.</p>
   <input id="code" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="XXXX-XXXX" maxlength="20">
   <button id="go" type="submit" disabled>Ouvrir l'application</button>
@@ -48,7 +48,7 @@
 <script>
   // Adresse de l'application Google Apps Script (celle qui se termine par /exec)
   const APP_URL = 'A_REMPLACER';
-  const KEY = 'pilotage_code';
+  const KEY = 'rentya_code';
   const get = () => { try { return localStorage.getItem(KEY) || ''; } catch (e) { return ''; } };
   const set = v => { try { localStorage.setItem(KEY, v); } catch (e) {} };
   if (location.hash === '#reset') { try { localStorage.removeItem(KEY); } catch (e) {} history.replaceState(null, '', location.pathname); }
@@ -57,7 +57,7 @@
     document.getElementById('setup').hidden = true;
     document.getElementById('splash').hidden = false;
     const f = document.createElement('iframe');
-    f.title = 'Pilotage';
+    f.title = 'Rentya';
     f.allow = 'clipboard-write';
     f.src = APP_URL + (APP_URL.includes('?') ? '&' : '?') + 'k=' + encodeURIComponent(code);
     f.onload = () => { f.classList.add('on'); setTimeout(() => document.getElementById('splash').hidden = true, 250); };
